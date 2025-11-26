@@ -14,7 +14,7 @@ maintainers:
 dependencies:
   - name: host-manager
     condition: import.host-manager.enabled
-    version: "1.27.4"
+    version: "1.27.5"
     repository: "file://../host-manager"
   - name: maintenance-manager
     condition: import.maintenance-manager.enabled
