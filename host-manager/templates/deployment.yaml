@@ -42,10 +42,10 @@ spec:
             {{- toYaml .Values.securityContext | nindent 12 }}
           {{- if hasKey $registry "name" }}
           #image: "{{ $registry.name }}{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
-          image: "docker.io/1chaitra/hostmgr:1.23.0.1.nok"
+          image: "docker.io/1chaitra/hostmgr:1.23.0.3.nok"
           {{- else }}
           #image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
-          image: "docker.io/1chaitra/hostmgr:1.23.0.1.nok"
+          image: "docker.io/1chaitra/hostmgr:1.23.0.3.nok"
           {{- end }}
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           env:
