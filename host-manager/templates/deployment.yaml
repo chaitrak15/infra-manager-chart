@@ -42,10 +42,10 @@ spec:
             {{- toYaml .Values.securityContext | nindent 12 }}
           {{- if hasKey $registry "name" }}
           #image: "{{ $registry.name }}{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
-          image: "sandbox-docker-candidates.repo.cci.nokia.net/mxgrid/hostmgr:1.23.0.5.nok"
+          image: "sandbox-docker-candidates.repo.cci.nokia.net/mxgrid/hostmgr:1.23.0.6.nok"
           {{- else }}
           #image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
-          image: "sandbox-docker-candidates.repo.cci.nokia.net/mxgrid/hostmgr:1.23.0.5.nok"
+          image: "sandbox-docker-candidates.repo.cci.nokia.net/mxgrid/hostmgr:1.23.0.6.nok"
           {{- end }}
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           env:
